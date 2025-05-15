@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Озеленение города Казань</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Озеленение города Казань</h1>
+    <p>Сохраним природу вместе!</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="reviews.html">Отзывы</a>
+    <a href="contacts.html">Контакты</a>
+  </nav>
+
+  <section class="scroll-fade">
+    <h2>Наша миссия</h2>
+    <p>Сделать Казань самым зелёным городом России путём высадки деревьев и ухода за зелёными зонами.</p>
+  </section>
+
+  <section class="scroll-fade">
+    <h2>Что мы делаем</h2>
+    <ul>
+      <li>Проектирование зелёных зон</li>
+      <li>Посадка деревьев и кустарников</li>
+      <li>Озеленение дворов и улиц</li>
+    </ul>
+  </section>
+
+  <section class="video-container scroll-fade">
+    <iframe 
+      src="%D0%92%D0%98%D0%94%D0%95%D0%9E.mp4" 
+      title="Видео об озеленении города Казань"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Озеленение Казани</p>
+  </footer>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("loaded");
+    });
+
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll(".scroll-fade").forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          el.classList.add("visible");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+[Ссылка]
+RUTUBE Плеер
+http://rutube.ru/play/embed/3b68ce8ce97d632267dbf6fbcdd8aa77

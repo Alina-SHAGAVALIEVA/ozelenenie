@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>О нас — Озеленение Казани</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Озеленение города Казань</h1>
+    <p>Забота о природе — забота о будущем!</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="reviews.html">Отзывы</a>
+    <a href="contacts.html">Контакты</a>
+  </nav>
+
+  <section class="scroll-fade">
+    <h2>Наша миссия</h2>
+    <p>Мы стремимся сделать Казань самым зелёным городом России путём высадки деревьев, озеленения территорий и благоустройства районов.</p>
+  </section>
+
+  <section class="scroll-fade">
+    <h2>Что мы делаем</h2>
+    <ul>
+      <li>Проектирование зелёных зон</li>
+      <li>Посадка деревьев и кустарников</li>
+      <li>Уход за зелёными насаждениями</li>
+      <li>Образовательные мероприятия по экологии</li>
+    </ul>
+  </section>
+
+  <section class="gallery scroll-fade">
+    <img src="img1.jpg" alt="Посадка деревьев">
+    <img src="img2.jpg" alt="Озеленение территории">
+    <img src="img3.jpg" alt="Работа волонтёров">
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Озеленение Казани</p>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+    });
+
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.scroll-fade').forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

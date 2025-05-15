@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Отзывы — Озеленение Казани</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Озеленение города Казань</h1>
+    <p>Отзывы наших партнёров и горожан</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="reviews.html">Отзывы</a>
+    <a href="contacts.html">Контакты</a>
+  </nav>
+
+  <section class="scroll-fade">
+    <h2>Что говорят о нас</h2>
+
+    <div class="review">
+      <p><strong>Ирина К.</strong>: Спасибо за чистый и зелёный двор! Очень довольна!</p>
+    </div>
+
+    <div class="review">
+      <p><strong>ООО "Комфорт Казань"</strong>: Отличная работа! Быстро и качественно.</p>
+    </div>
+
+    <div class="review">
+      <p><strong>Айдар Г.</strong>: Приятно видеть, как меняется облик города!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Озеленение Казани</p>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+    });
+
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.scroll-fade').forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
